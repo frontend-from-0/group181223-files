@@ -1,0 +1,26 @@
+/* CSS selectors:
+1. Element selector, e.g. p, h1, a, body..
+2. Class selector: .class-name
+3. Id (Unique identifier) selector: #id-attribute-name
+*/
+
+body {
+  background-color: aquamarine;
+}
+
+.text-light {
+  color: grey;
+}
+
+/* #second-paragraph {
+  color: white;
+  background-color: green;
+} */
+
+.text-dark {
+  color: black;
+}
+
+ul {
+  list-style-type: square;
+}
