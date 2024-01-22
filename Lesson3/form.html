@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML Forms</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<form action="#" method="GET">
+			<label for="name" class="full-line-label">Name:</label>
+			<input type="text" placeholder="Anna" name="name" class="text-input"/>
+
+			<label for="email" class="full-line-label">Email:</label>
+			<input class="text-input" type="email" id="email" name="email" placeholder="anna@gmail.com" required />
+
+			<label for="password" class="full-line-label">Password:</label>
+			<input
+				class="text-input"
+				type="password"
+				id="password"
+				name="password"
+				required
+			/>
+
+			<fieldset>
+				<legend>Gender</legend>
+
+				<input type="radio" id="gender-male" name="gender" value="male" />
+				<label for="gender-male">Male</label>
+
+				<input type="radio" id="gender-female" name="gender" value="female" />
+				<label for="gender-female">Female</label>
+
+				<input type="radio" id="gender-other" name="gender" value="other" />
+				<label for="gender-other">Other</label>
+			</fieldset>
+
+            <fieldset>
+				<legend>Gender (multiple selection)</legend>
+
+				<input type="checkbox" id="gender-male-multiple" name="gender-multiple" value="male" />
+				<label for="gender-male">Male</label>
+
+				<input type="checkbox" id="gender-female-multiple" name="gender-multiple" value="female" />
+				<label for="gender-female">Female</label>
+
+				<input type="checkbox" id="gender-other-multiple" name="gender-multiple" value="other" />
+				<label for="gender-other">Other</label>
+			</fieldset>
+
+			<label for="interests" class="full-line-label">Your Interests:</label>
+			<select id="interests" name="interests">
+				<option value="coding">Coding</option>
+				<option value="music">Music</option>
+				<option value="sports">Sports</option>
+			</select>
+
+			<label for="bio" class="full-line-label">Bio:</label>
+			<textarea id="bio" name="bio"></textarea>
+
+			<input type="submit" value="Submit" />
+            <button type="submit" class="btn btn-success">Submit</button>
+		</form>
+	</body>
+</html>

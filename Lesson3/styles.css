@@ -1,0 +1,70 @@
+/* 
+Colors
+
+Accent - #5aa4a4
+Background - #effafa
+Dark (primary text) - #2b3a3a
+Lighter (secondary text, borders, etc.) - #7a8e8e
+
+Typography
+
+Font size: 15px
+Headings:
+Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 500, 700
+
+General text: Roboto 400
+Family: [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #effafa;
+	color: #2b3a3a;
+	font-size: 15px;
+	margin: 0;
+	padding: 20px;
+}
+
+form {
+	width: 100%;
+	max-width: 500px;
+	margin: 20px auto;
+}
+
+.full-line-label {
+	display: block;
+}
+/* Flexbox, CSS Grid */
+
+.text-input {
+	width: 100%;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	display: block;
+}
+
+.text-input, fieldset, select, textarea {
+	margin-bottom: 14px;
+}
+
+/* BEM - block element modifier (naming conception used in CSS) */
+
+
+
+
+
+
+
+
