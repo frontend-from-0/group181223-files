@@ -1,0 +1,79 @@
+/* 
+  Colors
+  Standard colors (e.g. blue, red, yellow). Full list can be found here: https://www.w3schools.com/tags/ref_colornames.asp
+
+  HEX & HEXA (#RRGGBB & #RRGGBBAA) - #000 #000000 both are black color (mostly used in frontend development)
+
+  RGB - rgb(0,0,0)
+  RGBA - rgba(0,0,0,0.4) the last number is for opacity (transparency)
+  
+  HSL & HSLA (HUE - SATURATION - LIGHTNESS)
+
+  ! We do not mix different color types in the same project, only rgba is an exception and can be combined with other types when opacity is needed.
+ */
+
+ * {
+  box-sizing: border-box;
+ }
+
+ body {
+  background-color: rgba(98, 124, 172, 0.9);
+  color: #f0ffff;
+  border: 5px solid rgba(240, 255, 255, 0.5);
+ }
+ 
+
+ form {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+ }
+
+ .full-line-label {
+  display: block;
+ }
+
+ .text-input {
+  /* display: block; */
+  width: 100%;
+ }
+
+ a {
+  display: inline-block;
+  /* width: 300px;
+  height: 100px; */
+  margin: 20px 10px;
+  /* shorthand for padding: 10px 10px 10px 10px; */
+  padding: 10px;
+  border: 1px solid rgba(240, 255, 255, 0.5);
+ }
+
+ /* Margin shorthand properties:
+ margin: 10px 20px 30px; top right/left bottom
+ margin: 10px; top right bottom left
+ margin: 20px 10px; top/bottom right/left
+ margin: 10px 15px 20px 25px; top right bottom left
+ */
+
+.inline-paragraph {
+  display: inline-block;
+}
+
+img {
+  max-width: 500px;
+}
+
+.parent-div {
+  background-color: #7fffd4;
+  padding: 10px;
+}
+
+.child-div {
+  background-color: #ddff7f;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid #f0ffff;
+}
+

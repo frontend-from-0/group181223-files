@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quis deleniti saepe cupiditate sint recusandae modi error. Voluptates nulla rerum facere harum officia tenetur, est iusto minus similique nihil omnis!</p>
+
+  <form action="#" method="GET">
+    <label for="name" class="full-line-label">Name:</label>
+    <input type="text" placeholder="Anna" name="name" class="text-input"/>
+
+    <fieldset>
+      <legend>Gender</legend>
+
+      <input type="radio" id="gender-male" name="gender" value="male" />
+      <label for="gender-male">Male</label>
+
+      <input type="radio" id="gender-female" name="gender" value="female" />
+      <label for="gender-female">Female</label>
+
+      <input type="radio" id="gender-other" name="gender" value="other" />
+      <label for="gender-other">Other</label>
+    </fieldset>
+
+    <input type="submit" value="Submit" />
+  </form>
+
+  <p class="inline-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><span>Link to some website.</span>
+
+  <a href="#" >Link 1</a>
+  <a href="#" >Link 2</a>
+  <a href="#" >Link 3</a>
+  <!-- 
+    Inline level elements
+    You cannot aply height, width, top and bottom margin/padding etc. to inline elements
+  -->
+
+  <!--
+    Block level elements
+  -->
+  <div></div>
+  <main></main>
+  <p></p>
+
+  <!-- 
+    Inline-block level elements
+    Similar to inline element but can be adjusted with height, width, top and bottom margin/padding properties
+  -->
+  <!-- <img src="https://images.unsplash.com/photo-1643261247961-bedad0595e03?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a fireworks display in the sky over a body of water">
+  <img src="https://images.unsplash.com/photo-1643261247961-bedad0595e03?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a fireworks display in the sky over a body of water">
+  <img src="https://images.unsplash.com/photo-1643261247961-bedad0595e03?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="a fireworks display in the sky over a body of water"> -->
+
+  <!-- Box-model -->
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing?authuser=0 
+  Border-box: 
+  width + padding + border = actual width of an element
+  height + padding + border = actual height of an element
+  -->
+
+  <div class="parent-div">
+    <div class="child-div">
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quibusdam hic, natus accusantium quos vel non numquam, beatae nobis nemo incidunt ipsa doloribus earum aspernatur excepturi error laborum dignissimos quasi.</p>
+    <div class="child-div">
+    </div>
+  </div>
+
+  <!-- CSS Units -->
+  <!-- Absolute Units -->
+  <!-- px, pt (points), in, cm, mm -->
+
+  <!-- Relative Units -->
+  <!-- %, viewport units, em, rem, fr -->
+  
+</body>
+</html>
