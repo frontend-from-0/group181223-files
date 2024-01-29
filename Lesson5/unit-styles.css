@@ -1,0 +1,51 @@
+/*
+Facebook button: #385499
+Input borders: #BABFC5
+Menu items' borders: #636B74
+Primary blue: #1B75D0
+Darker blue: #155CA2
+Light text: #3B4045
+Black text: #0C0D0E
+Main background: #F1F2F3
+*/
+
+/* body, html */
+:root {
+  font-size: 16px;
+}
+/* 
+px - are usually used for: font sizes, margins, paddings, border width, border-radius
+% - usually used for width, height; border-radius
+vh, vw - usually used for width, height
+fr - used together with CSS Grid
+em - unit relative to element
+rem - unit relative to root element
+*/
+
+p {
+  font-size: 1.2rem; /* 1.2 x browser's default font size*/
+}
+
+h1 {
+  font-size: 1.6em;/* 1.6 x browser's default font size*/
+}
+
+
+.parent-div {
+  /* Only use if you know for sure that the element will be of this size on any devise */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  height: 50vh;
+  border: 1px solid green;
+}
+
+.child-div {
+  width: 50vw;
+  border: 1px solid black;
+  height: 10vh;
+}
+
+button {
+  min-width: 48px;
+}
