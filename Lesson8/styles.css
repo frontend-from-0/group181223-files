@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f2f3;
+  font-family: "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
+  margin: 0;
+}
+
+.container {
+}
+
+.content > div {
+  height: 300px;
+}
+
+.header {
+  background-color: #006c67;  
+}
+.sidebar-left {
+  background-color: #003844;
+}
+.sidebar-right {
+  background-color: #ffb100;
+}
+.content {
+  background-color: #ffebc6;
+}
+.footer {
+  background-color: #006c67;  
+}
