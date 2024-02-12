@@ -9,24 +9,41 @@ body {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: [site-start] 200px [content-start] auto [content-end] 200px [site-end];
+  grid-template-rows:[site-start] 100px [header-end content-start] auto [content-end] 500px [site-end];
+  grid-template-areas:
+  "header header header"
+  "sidebar-left content sidebar-right" "sidebar-left footer footer";
 }
 
 .content > div {
   height: 300px;
+  
 }
 
 .header {
   background-color: #006c67;  
+  /* grid-column: site-start / site-end; */
+  grid-area:header;
+
 }
 .sidebar-left {
+  /* grid-row: header-end / site-end; */
   background-color: #003844;
+  grid-area:sidebar-left;
 }
 .sidebar-right {
   background-color: #ffb100;
+  grid-area:sidebar-right;
+ 
 }
 .content {
   background-color: #ffebc6;
+  grid-area: content;
 }
 .footer {
+  /* grid-column: content-start /site-end; */
   background-color: #006c67;  
+  grid-area: footer;
 }
