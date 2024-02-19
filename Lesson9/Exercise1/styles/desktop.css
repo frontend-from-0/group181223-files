@@ -1,3 +1,13 @@
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+
+}
+
 /* 
 Recommended button and link sizes for mobile devices:
 - Minumum 16px (height) x 44px (width)
@@ -8,11 +18,12 @@ Font sizes for mobile devices:
 
 */
 
+
 /*
-Here are commonly used **media query break points**:
+Here are commonly used media query break points:
 
 Extra small devices (portrait phones) - up to 576px
-@media (max-width: 575.98px) - styles for extra small devices 
+@media (max-width: 575.99px) - styles for extra small devices 
 
 Small devices (landscape phones) - from 576px to 768px
 @media (min-width: 576px) and (max-width: 767.98px) - styles for small devices
@@ -22,6 +33,7 @@ Medium devices (tablets) - from 768px to 991px
 
 Large devices (laptops/desktops) - from 992px to 1199px (1040px)
 @media (min-width: 992px) and (max-width: 1199.98px) - styles for large devices
+
 
 Extra large devices (large laptops and desktops) - 1200px and above
 @media (min-width: 1200px) - styles for extra large devices
@@ -34,30 +46,4 @@ Create a simple media query that changes the background color of a webpage for e
 /* and, or, not, only - e.g. '@media only screen ...'
  */
 
-/* Genelde mobile, table, desktop ayriliyor - 768px - 1040px */
-@media all and (max-width: 575.99px) {
-	body {
-		background-color: blue;
-	}
-}
-@media all and (min-width: 576px) and (max-width: 777.99px) {
-	body {
-		background-color: gray;
-	}
-}
-
-@media all and (min-width: 768px) and (max-width: 991.99px) {
-	body {
-		background-color: cyan;
-	}
-}
-@media all and (min-width: 992px) and (max-width: 1199.99px) {
-	body {
-		background-color: yellow;
-	}
-}
-@media all and (min-width: 1200px) {
-	body {
-		background-color: red;
-	}
-}
+ /* Genelde mobile, table, desktop ayriliyor - 768px - 1040px */

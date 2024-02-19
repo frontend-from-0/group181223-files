@@ -4,7 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href=".styles/main.css" />
+		<link rel="stylesheet" href="styles/global.css" />
+		<!-- () are important in the media attribute!!! -->
+		<link rel="stylesheet" media="(min-width: 768px)" href="styles/desktop.css" />
+		<link rel="stylesheet" media="(max-width: 767.99px)" href="styles/mobile.css" />
+		<link rel="stylesheet" href="styles/main.css" />
 		<title>Media queries exercise 1</title>
 	</head>
 	<body>
@@ -18,10 +22,12 @@
 		<!-- For pictures and (large) images we use jpg (jpeg) or webp -->
 		<!-- For logos - png or svg -->
 
-		<picture>
+		<!-- <picture>
       <source media="(max-width: 767.99px)" srcset="./images/img-small.jpg"/>
       <source media="(min-width: 768px)" srcset="./images/img-regular.jpg"/>
       <img src="./images/img-regular.jpg" alt="Some image description">
-    </picture>
+    </picture> -->
 	</body>
 </html>
+
+hi Anna, forgot my Vs Code Error
