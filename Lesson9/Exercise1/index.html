@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href=".styles/main.css" />
+		<title>Media queries exercise 1</title>
+	</head>
+	<body>
+		<!-- <img
+			srcset="./images/biker-480w.jpg 480w, ./images/biker-800w.jpg 800w"
+			sizes="(max-width: 600px) 480px,
+         800px"
+			src="./images/biker-800w.jpg"
+			alt="A man riding a bike"
+		/> -->
+		<!-- For pictures and (large) images we use jpg (jpeg) or webp -->
+		<!-- For logos - png or svg -->
+
+		<picture>
+      <source media="(max-width: 767.99px)" srcset="./images/img-small.jpg"/>
+      <source media="(min-width: 768px)" srcset="./images/img-regular.jpg"/>
+      <img src="./images/img-regular.jpg" alt="Some image description">
+    </picture>
+	</body>
+</html>

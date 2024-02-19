@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+
+}
+
+/* 
+Recommended button and link sizes for mobile devices:
+- Minumum 16px (height) x 44px (width)
+- 8px - 10px margin around buttons and links
+
+Font sizes for mobile devices:
+- 16px is recommended for normal text (paragraph elements)
+
+*/
+
+
+/*
+Here are commonly used media query break points:
+
+Extra small devices (portrait phones) - up to 576px
+@media (max-width: 575.99px) - styles for extra small devices 
+
+Small devices (landscape phones) - from 576px to 768px
+@media (min-width: 576px) and (max-width: 767.98px) - styles for small devices
+
+Medium devices (tablets) - from 768px to 991px
+@media (min-width: 768px) and (max-width: 991.98px) - styles for medium devices
+
+Large devices (laptops/desktops) - from 992px to 1199px (1040px)
+@media (min-width: 992px) and (max-width: 1199.98px) - styles for large devices
+
+
+Extra large devices (large laptops and desktops) - 1200px and above
+@media (min-width: 1200px) - styles for extra large devices
+
+TODO:
+Create a simple media query that changes the background color of a webpage for each size stated above
+
+*/
+/* Screen, print, speech, all */
+/* and, or, not, only - e.g. '@media only screen ...'
+ */
+
+ /* Genelde mobile, table, desktop ayriliyor - 768px - 1040px */

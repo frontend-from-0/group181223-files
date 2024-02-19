@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+/*
+Here are commonly used media query break points:
+
+Extra small devices (portrait phones) - up to 576px
+@media (max-width: 575.98px) - styles for extra small devices 
+
+Small devices (landscape phones) - from 576px to 767px
+@media (min-width: 576px) and (max-width: 767.98px) - styles for small devices
+
+Medium devices (tablets) - from 768px to 991px
+@media (min-width: 768px) and (max-width: 991.98px) - styles for medium devices
+
+Large devices (laptops/desktops) - from 992px to 1199px
+@media (min-width: 992px) and (max-width: 1199.98px) - styles for large devices
+
+Extra large devices (large laptops and desktops) - 1200px and above
+@media (min-width: 1200px) - styles for extra large devices
+
+TODO:
+Create a responsive navigation menu that collapses into a "hamburger" menu on screens with a width of 768 pixels or less and displays horizontally on larger screens.
+1. Add a navigation menu with several list items (Home, About, Services, Contact) within the body.
+2. Style the navigation menu (background color, font, etc.).
+3. Style the list items to display horizontally on larger screens.
+4. Add a "hamburger" menu icon (&#9776;) and hide it by default.
+5. Create a media query using the "screen" media type and "max-width: 767px" media feature.
+6. Inside the media query, change the list items to display vertically and hide them by default.
+7. Show the "hamburger" menu icon on small screens.
+8. Use :checked pseudo-class to toggle the visibility of the vertical navigation menu when the "hamburger" icon is clicked.
+9. Test your webpage in a browser and adjust the browser window's width to see the navigation menu change based on screen size.
+
+*/
+
