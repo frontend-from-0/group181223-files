@@ -5,11 +5,19 @@
   --color-dark: #1d2124;
   --color-light: #DFDFDF;
   --color-blue: #007bff;
+  --color-base: #ffffff;
+  --margin-medium: 16px;
+  --margin-large: 20px;
 }
 
 body {
   margin:0;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
 }
 
 .navbar {
@@ -24,14 +32,7 @@ body {
   box-shadow: 0px 2px 10px #a2a0a04c;
 }
 
-.right {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-
-}
-
-.list {
+.navbar__menu {
   display: flex;
   align-items: center;
   list-style-type: none;
@@ -40,16 +41,11 @@ body {
 }
 
 .menu-link {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  color: var(--color-dark);
-  font-size: 16px;
-}
-
-.list-item {
+  text-decoration: none;
   padding: 12px;
-  color: var(--color-dark);
+}
+.menu-link:hover{
+  text-decoration: underline;
 }
 
 .logo {
@@ -60,64 +56,33 @@ body {
   justify-content: start;
 }
 
-
-.link {
-  text-decoration: none;
-}
-
-
-.features-button:hover,
-.enterprise-button:hover,
-.support-button:hover,
-.pricing-button:hover {
-  text-decoration: underline;
-}
-
-
-.signup-button {
-  color: var(--color-blue);
-  padding: 7px 12px;
-  border: 1px solid var(--color-blue);
-  border-radius: 5px;
-  white-space: nowrap;
-}
-
-.signup-button:hover {
-  color: #ffffff !important;
-  background-color: var(--color-blue);
-  transition: 0.3s;
-}
-
-.container {
-  max-width: 975px;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-
-.pricing {
-
+.hero {
   margin: 0 auto;
   padding: 8px 0;
   max-width: 800px;
 }
 
-.pricing-header {
+.hero__heading {
   text-align: center;
   font-size: 56px;
   font-weight: 200;
   margin-bottom: 0;
 }
 
-.pricing-text {
+.hero__text {
   text-align: center;
   font-size: 20px;
   font-weight: 100;
   line-height: 30px;
   padding: 0 15px;
 }
+.w-80 {
+  width: 100%;
+  max-width:80vw;
+  margin:0 auto;
+}
 
-.cards {
+.container {
   display: flex;
   justify-content: space-between;
 }
@@ -131,11 +96,12 @@ body {
   box-shadow: 0 1px 5px #00000013;
 }
 
-.card-list {
+.card__list {
   padding: 0;
+  list-style-type: none;
 }
 
-.subscription-type {
+.card__header {
   border-bottom: 1px solid var(--color-light);
   margin: 0;
   padding: 10px 0;
@@ -144,80 +110,48 @@ body {
   border-radius: 5px 5px 0 0;
 }
 
-.card-text {
-  list-style-type: none;
-  padding: 0 20px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 24px;
-  white-space: nowrap;
-
-}
-
-.price-and-text {
-
+.card__content {
   padding: 20px;
-
 }
 
-.dollar {
+.card__price-amount {
   font-size: 40px;
   font-weight: 500;
 }
 
-.month {
+.card__price-interval {
   font-size: 32px;
   color: #6c757d;
   font-weight: 400;
 }
 
-.pb-white {
-  color: var(--color-blue);
-  background-color: #ffffff;
-  border: 1px solid var(--color-blue);
-
-}
-
-.pb-blue {
-  color: #ffffff;
-  border: 1px solid var(--color-blue);
-  background-color: var(--color-blue);
-}
-
-.price-button {
-  display: flex;
-  justify-content: center;
+.button {
   text-decoration: none;
-  width: 90%;
   padding: 10px;
-  margin: 20px auto;
   font-size: 20px;
   border-radius: 5px;
+  display: block;
 }
 
-
-.pb-white:visited {
+.button--outlined {
   color: var(--color-blue);
-
+  border: 1px solid var(--color-blue);
 }
 
-.pb-white:hover {
+.button--outlined:hover {
   background-color: var(--color-blue);
-  color: #ffffff;
-  transition: 0.3s;
+  color: var(--color-base);
 }
 
-
-
-.pb-blue:visited {
-  color: #ffffff;
-
-}
-
-.pb-blue:hover {
+.button--primary {
+  color: var(--color-base);
+  border: 1px solid var(--color-blue);
   background-color: var(--color-blue);
-  color: #ffffff;
-  transition: 0.3s;
+}
+
+.button--primary:hover {
+  background-color: var(--color-base);
+  color:var(--color-blue)
 }
 
 .extras {
@@ -276,7 +210,6 @@ body {
 }
 
 @media screen and (max-width:770px) {
-
   .navbar {
       display: flex;
       flex-direction: column;
@@ -284,16 +217,12 @@ body {
       height: 90px;
   }
 
-  .navbar--left {
-      justify-content: center;
-  }
-
   .company-link {
       font-size: 16px;
   }
 
 
-  .navbar-right>ul {
+  .right>ul {
       justify-content: center;
       margin: 0;
   }
@@ -311,17 +240,6 @@ body {
   .cards {
       flex-wrap: wrap;
       align-content: center;
-  }
-
-  .free,
-  .pro {
-
-      flex-grow: 1;
-  }
-
-  .enterprise {
-      flex-grow: 2;
-
   }
 
   .extras {
