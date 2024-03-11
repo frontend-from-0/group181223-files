@@ -1,6 +1,21 @@
 * {
 	box-sizing: border-box;
 }
+:root {
+	--color-text-default:#1d2124;
+	--color-text-secondary: #6c757d;
+	--color-primary: #127913;
+	--color-secondary:#dfdfdf;
+	--color-background: #ffffff;
+	--color-shadow: #a2a0a04c;
+	--border-radius: 5px;
+
+	--space-xs: 4px;
+	--space-s: 8px;
+	--space-md: 12px;
+	--space-lg: 16px;
+	--space-xlg: 20px;
+}
 
 body {
 	margin: 0;
@@ -13,10 +28,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-bottom: solid 1px #dfdfdf;
+	border-bottom: solid 1px var(--color-secondary);
 	padding: 16px 24px;
 	margin-bottom: 16px;
-	box-shadow: 0px 2px 10px #a2a0a04c;
+	box-shadow: 0px 2px 10px var(--color-shadow);
 }
 
 .right {
@@ -29,21 +44,19 @@ body {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-	color: #1d2124;
-	font-size: 16px;
+	color: var(--color-text-default);
 }
 
 .menu-link {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-	color: #1d2124;
-	font-size: 16px;
+	color: var(--color-text-default);
 }
 
 .list-item {
-	padding: 12px;
-	color: #1d2124;
+	padding: var(--space-md);
+	color: var(--color-text-default);
 }
 
 .logo {
@@ -66,16 +79,16 @@ body {
 }
 
 .signup-button {
-	color: #007bff;
-	padding: 7px 12px;
-	border: 1px solid #007bff;
-	border-radius: 5px;
+	color: var(--color-primary);
+	padding: var(--space-s) var(--space-md);
+	border: 1px solid var(--color-primary);
+	border-radius: var(--border-radius);
 	white-space: nowrap;
 }
 
 .signup-button:hover {
-	color: #ffffff !important;
-	background-color: #007bff;
+	color: var(--color-background) !important;
+	background-color: var(--color-primary);
 	transition: 0.3s;
 }
 
@@ -87,7 +100,7 @@ body {
 
 .pricing {
 	margin: 0 auto;
-	padding: 8px 0;
+	padding: var(--space-xs) 0;
 	max-width: 800px;
 }
 
@@ -112,12 +125,12 @@ body {
 }
 
 .card {
-	border: 1px solid #dfdfdf;
+	border: 1px solid var(--color-secondary);
 	text-align: center;
 	flex: 1;
 	margin: 20px;
-	border-radius: 5px;
-	box-shadow: 0 1px 5px #00000013;
+	border-radius: var(--border-radius);
+	box-shadow: 0 1px 5px var(--color-shadow);
 }
 
 .card-list {
@@ -125,12 +138,13 @@ body {
 }
 
 .subscription-type {
-	border-bottom: 1px solid #dfdfdf;
+	/* Border color is different, find out what color exactly it should be */
+	border-bottom: 1px solid var(--color-text-secondary);
 	margin: 0;
 	padding: 10px 0;
-	background-color: #f7f7f7;
+	background-color: var(--color-secondary);
 	font-weight: 400;
-	border-radius: 5px 5px 0 0;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .card-text {
@@ -153,20 +167,20 @@ body {
 
 .month {
 	font-size: 32px;
-	color: #6c757d;
+	color: var(--color-text-secondary);
 	font-weight: 400;
 }
 
 .pb-white {
-	color: #007bff;
-	background-color: #ffffff;
-	border: 1px solid #007bff;
+	color: var(--color-primary);
+	background-color:var(--color-background);
+	border: 1px solid var(--color-primary);
 }
 
 .pb-blue {
-	color: #ffffff;
-	border: 1px solid #007bff;
-	background-color: #007bff;
+	color: var(--color-background);
+	border: 1px solid var(--color-primary);
+	background-color: var(--color-primary);
 }
 
 .price-button {
@@ -177,26 +191,26 @@ body {
 	padding: 10px;
 	margin: 20px auto;
 	font-size: 20px;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 }
 
 .pb-white:visited {
-	color: #007bff;
+	color: var(--color-primary);
 }
 
 .pb-white:hover {
-	background-color: #007bff;
-	color: #ffffff;
+	background-color: var(--color-primary);
+	color: var(--color-background);
 	transition: 0.3s;
 }
 
 .pb-blue:visited {
-	color: #ffffff;
+	color: var(--color-background);
 }
 
 .pb-blue:hover {
-	background-color: #007bff;
-	color: #ffffff;
+	background-color: var(--color-primary);
+	color: var(--color-background);
 	transition: 0.3s;
 }
 
@@ -205,7 +219,7 @@ body {
 	justify-content: center;
 	margin: 50px 10px;
 	border: 20px 10px;
-	border-top: 1px solid #dfdfdf;
+	border-top: 1px solid var(--color-secondary);
 }
 
 .bottom-list {
@@ -231,12 +245,12 @@ body {
 .extras-text {
 	text-decoration: none;
 	font-size: 16px;
-	color: #6c757d;
+	color: var(--color-text-secondary);
 	white-space: nowrap;
 }
 
 .extras-text:visited {
-	color: #6c757d;
+	color: var(--color-text-secondary);
 }
 
 .extras-text:hover {
@@ -248,7 +262,7 @@ body {
 }
 
 .bootstrap-year {
-	margin: 8px 0;
+	margin: var(--space-xs) 0;
 }
 
 @media screen and (max-width: 770px) {
