@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --color-dark: #1d2124;
+  --color-light: #DFDFDF;
+  --color-blue: #007bff;
+}
+
+body {
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--color-light);
+  padding: var(--margin-medium) var(--margin-large);
+  margin-bottom: 16px;
+  box-shadow: 0px 2px 10px #a2a0a04c;
+}
+
+.right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  color: var(--color-dark);
+  font-size: 16px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  color: var(--color-dark);
+  font-size: 16px;
+}
+
+.list-item {
+  padding: 12px;
+  color: var(--color-dark);
+}
+
+.logo {
+  padding: 10px;
+  font-size: 20px;
+  color: #212529;
+  white-space: nowrap;
+  justify-content: start;
+}
+
+
+.link {
+  text-decoration: none;
+}
+
+
+.features-button:hover,
+.enterprise-button:hover,
+.support-button:hover,
+.pricing-button:hover {
+  text-decoration: underline;
+}
+
+
+.signup-button {
+  color: var(--color-blue);
+  padding: 7px 12px;
+  border: 1px solid var(--color-blue);
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.signup-button:hover {
+  color: #ffffff !important;
+  background-color: var(--color-blue);
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 975px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.pricing {
+
+  margin: 0 auto;
+  padding: 8px 0;
+  max-width: 800px;
+}
+
+.pricing-header {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.pricing-text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  border: 1px solid var(--color-light);
+  text-align: center;
+  flex: 1;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #00000013;
+}
+
+.card-list {
+  padding: 0;
+}
+
+.subscription-type {
+  border-bottom: 1px solid var(--color-light);
+  margin: 0;
+  padding: 10px 0;
+  background-color: #F7F7F7;
+  font-weight: 400;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-text {
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+
+}
+
+.price-and-text {
+
+  padding: 20px;
+
+}
+
+.dollar {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.month {
+  font-size: 32px;
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.pb-white {
+  color: var(--color-blue);
+  background-color: #ffffff;
+  border: 1px solid var(--color-blue);
+
+}
+
+.pb-blue {
+  color: #ffffff;
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
+}
+
+.price-button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  width: 90%;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+
+.pb-white:visited {
+  color: var(--color-blue);
+
+}
+
+.pb-white:hover {
+  background-color: var(--color-blue);
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+
+
+.pb-blue:visited {
+  color: #ffffff;
+
+}
+
+.pb-blue:hover {
+  background-color: var(--color-blue);
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.extras {
+  display: flex;
+  justify-content: center;
+  margin: 50px 10px;
+  border: 20px 10px;
+  border-top: 1px solid var(--color-light);
+}
+
+.bottom-list {
+  margin: 0 auto;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.extras-heading {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+.extras-list {
+  padding: 0;
+  margin: 0;
+}
+
+.extras-link {
+  list-style-type: none;
+
+}
+
+.extras-text {
+  text-decoration: none;
+  font-size: 16px;
+  color: #6c757d;
+  white-space: nowrap;
+
+}
+
+.extras-text:visited {
+  color: #6c757d;
+
+}
+
+.extras-text:hover {
+  text-decoration: underline;
+}
+
+.bsicon {
+  margin-top: 25px;
+}
+
+.bootstrap-year {
+  margin: 8px 0;
+}
+
+@media screen and (max-width:770px) {
+
+  .navbar {
+      display: flex;
+      flex-direction: column;
+      padding: 2px;
+      height: 90px;
+  }
+
+  .navbar--left {
+      justify-content: center;
+  }
+
+  .company-link {
+      font-size: 16px;
+  }
+
+
+  .navbar-right>ul {
+      justify-content: center;
+      margin: 0;
+  }
+
+  .pricing-header {
+      margin-top: 5px;
+      font-size: 40px;
+  }
+
+  .pricing-text {
+      font-size: 16px;
+
+  }
+
+  .cards {
+      flex-wrap: wrap;
+      align-content: center;
+  }
+
+  .free,
+  .pro {
+
+      flex-grow: 1;
+  }
+
+  .enterprise {
+      flex-grow: 2;
+
+  }
+
+  .extras {
+      flex-wrap: wrap;
+  }
+
+  .bottom-list {
+      width: 50%;
+  }
+
+}
