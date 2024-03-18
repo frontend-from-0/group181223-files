@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Accessible Page with BEM Naming</title>
+		<link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/d2ae1f236a.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="header">
+			<span class="header__title">Welcome to Our Accessible Website</span>
+			<div class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-house"></i></a></li>
+					<li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+					<li class="nav__item" id="nav__item-contact">
+						<a href="#" class="nav__link">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="product">
+				<img
+					src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2264&q=80"
+					class="product__image"
+				/>
+				<h2 class="product__title">Product - Innovative Solution</h2>
+				<p class="product__description">
+					Discover our amazing product designed to make your life easier.
+				</p>
+				<button type="button" class="button">Add</button>
+			</div>
+
+			<div class="product">
+				<img
+					src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+					alt="picture"
+					class="product__image"
+				/>
+				<h2 class="product__title">Product - Wellness Companion</h2>
+				<p class="product__description">
+					Upgrade your life with our wellness companion that promotes
+					well-being.
+				</p>
+				<button type="button" class="button">Add</button>
+			</div>
+
+			<div class="contact-form">
+				<h2 class="contact-form__title">Contact Us</h2>
+				<form class="contact-form__form">
+					<label class="contact-form__label">Name:</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						class="contact-form__input"
+						placeholder="John Doe"
+					/>
+					<label class="contact-form__label">Email:</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						class="contact-form__input"
+						placeholder="myemail@domain.com"
+					/>
+					<label class="contact-form__label" >Message:</label>
+					<textarea
+						id="message"
+						name="message"
+						class="contact-form__textarea"
+						placeholder="Ex.: Hi, I have a questions about delivery! Can you help me?"
+					></textarea>
+					<div>
+						<input type="checkbox" id="privacy-policy" name="privacy-policy" required />
+						<label class="text--small">I accept the privacy policy</label>
+					</div>
+					<input type="submit" class="button" value="Submit" />
+				</form>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p class="footer__text">&copy; 2023 Company Name. All rights reserved.</p>
+    </div>
+	</body>
+</html>
