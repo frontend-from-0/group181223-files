@@ -1,3 +1,4 @@
+// Loops can usually be used for arrays, strings, (Maps, NodeLists)
 /* 
 For loop
 The for loop is the most common loop and is used when the number of iterations is known before the loop starts.
@@ -45,4 +46,9 @@ The for...of loop is used to iterate over iterable objects such as Arrays, Strin
 const colors = ['red', 'green', 'blue'];
 for (const color of colors) {
     console.log(color);
+}
+
+
+for (let i = 0; i < colors.length; i++) {
+  console.log(colors[i]);
 }
