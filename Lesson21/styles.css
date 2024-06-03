@@ -1,0 +1,7 @@
+.button {
+  display: block;
+}
+
+.button--hidden {
+  display: none;
+}
