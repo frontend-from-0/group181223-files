@@ -25,15 +25,15 @@ The `DOM (Document Object Model)` is a programming interface for web documents.
 
 4. querySelector - returns the first element that matches a given CSS selector.
 
-```const element = document.querySelector("CSS selector");```
+```const element = document.querySelector("#id");```
 
 
 5. querySelectorAll - returns a static NodeList(*) of all elements that match a given CSS selector.
 
-```const elements = document.querySelectorAll("CSS selector");```
+```const elements = document.querySelectorAll(".className .anotherClassName");```
 
 
-6. getElementByName - returns a collection of elements with a specific name attribute (typically used with form elements when an element has "name" atrribute).
+6. getElementsByName - returns a collection of elements with a specific name attribute (typically used with form elements when an element has "name" atrribute).
 
 ```const elements = document.getElementsByName("elementName");```
 

@@ -5,3 +5,7 @@
 .button--hidden {
   display: none;
 }
+
+.color-red {
+  color: #ff0000;
+}
