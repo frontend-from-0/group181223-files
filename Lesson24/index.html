@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <h1>Form Validation Example</h1>
+  <div class="form-container">
+
+    <form id="myForm" novalidate>
+      <label for="name" class="form-label">Name:</label>
+      <div id="nameError" class="error"></div>
+      <input type="text" id="name" name="name" class="form-input" required>
+
+      <label for="surname" class="form-label">Surname:</label>
+      <div id="surnameError" class="error"></div>
+      <input type="text" id="surname" name="surname" class="form-input" required>
+
+      <label for="email" class="form-label">Email:</label>
+      <div id="emailError" class="error"></div>
+      <input type="email" id="email" name="email" class="form-input" required>
+
+      <label for="age" class="form-label">Age:</label>
+      <div id="ageError" class="error"></div>
+      <input type="number" id="age" name="age" class="form-input" required>
+
+      <label for="phone" class="form-label">Phone Number:</label>
+      <div id="phoneError" class="error"></div>
+      <input type="tel" id="phone" name="phone" class="form-input" required>
+
+      <input type="submit" value="Submit" class="submit-button">
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
