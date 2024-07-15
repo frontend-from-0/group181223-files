@@ -10,7 +10,7 @@ Here are some key concepts and techniques of functional programming in JavaScrip
 const add = (a, b) => a + b;
 const multiply = (a, b) => a * b;
 
-const operation = add;
+let operation = add;
 console.log(operation(2, 3)); // Output: 5
 ```
 

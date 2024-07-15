@@ -13,12 +13,14 @@ const wordsExercise1 = [
 	'jungle',
 ];
 
+const wordsExercise1Uppercase = wordsExercise1.map((element) => element.toUpperCase());
+console.log('Initial array', wordsExercise1);
+console.log('Modified array', wordsExercise1Uppercase);
 
 
 // Exercise 2:
 // Given an array of numbers, square each number using .map().
 const numbersExercise2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 
 // Exercise 3:
 // Given an array of objects representing products, extract an array of their names using .map().
@@ -84,6 +86,15 @@ const products = [
 		model: 'Charge 4',
 	},
 ];
+
+const arrayOfNames = products.map((object) => object.name); 
+console.log('Exercise3: ', arrayOfNames);
+
+// This is the same as line 90
+// let newArr = [];
+// for (let i = 0; i < products.length; i++) {
+// 	newArr.push(products[i].name);
+// }
 
 // Exercise 4:
 // Given an array of words, find the length of each word using .map().
@@ -164,7 +175,6 @@ const studentsExercise5 = [
 		grade: 'B-',
 	},
 ];
-
 
 // Exercise 6:
 // Given an array of numbers, convert each number to a string representation using .map().

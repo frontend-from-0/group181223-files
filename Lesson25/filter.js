@@ -1,7 +1,8 @@
 // Exercise 1:
 // Given an array of numbers, filter out the even numbers.
 const numbersExercise1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+const oddNums = numbersExercise1.filter( number => number%2 !== 0);
+console.log(numbersExercise1, oddNums);
 
 // Exercise 2:
 // Given an array of strings, filter out the strings that contain the letter "a".
