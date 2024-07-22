@@ -7,15 +7,6 @@
 /* Asyncronous programming
 - Asynchronous operations do not block the execution and allow other tasks to run concurrently.
 
-Callbacks:
-   - Callbacks are a common way to handle asynchronous operations in JavaScript.
-   - A callback function is passed as an argument to another function and gets invoked when the operation completes.
-
-   function greet() {
-    const name = getUserName();
-    return name + ' hi';
-   }
-
 Promises:
    - Promises provide an alternative to callbacks for handling asynchronous operations.
    - A promise represents the eventual completion or failure of an asynchronous operation.
@@ -64,7 +55,8 @@ POST request
 fetch('https://api.example.com/data', {
   method: 'POST',
   headers: {
-    'Content-Type': 'application/json' - Required in POST and PUT requests to specify the format of the data that is being sent
+    'Content-Type': 'application/json' - Required in POST and PUT requests to specify the format of the data that is being sent,
+    'Authorization': `Client-ID API_KEY`
   },
   body: JSON.stringify(requestData)
 })
@@ -86,20 +78,20 @@ fetch(`https://api.unsplash.com/photos/random?count=10&client_id=${API_KEY}`)
 .catch(error => console.log(error));
 
 
-// Same code using AJAX
+// // Same code using AJAX
 const xhr = new XMLHttpRequest();
 const url = `https://api.unsplash.com/photos/random?count=10&client_id=${API_KEY}`;
 
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-    if (xhr.status === 200) {
-      const data = JSON.parse(xhr.responseText);
-      console.log(data);
-    } else {
-      console.log('Error:', xhr.status, xhr.statusText);
-    }
-  }
-};
+// xhr.onreadystatechange = function () {
+//   if (xhr.readyState === 4) {
+//     if (xhr.status === 200) {
+//       const data = JSON.parse(xhr.responseText);
+//       console.log(data);
+//     } else {
+//       console.log('Error:', xhr.status, xhr.statusText);
+//     }
+//   }
+// };
 
 xhr.open('GET', url, true);
 xhr.send();

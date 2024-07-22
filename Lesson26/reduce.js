@@ -1,5 +1,7 @@
 /* array.reduce(callback(accumulator, currentValue, currentIndex, array), initialValue);
-  
+array.reduce((accumulator, currentValue, currentIndex, array) => {}, initialValue);  
+
+
 - callback: A function that is executed on each element of the array. It takes four arguments:
 - accumulator: The accumulated value that is returned after each iteration. It starts with the value of initialValue on the first iteration and is the result of the previous iteration in subsequent iterations.
 - currentValue: The current element being processed in the array.
@@ -13,7 +15,15 @@
 // Exercise 1:
 // Calculate the sum of all numbers in the given array.
 const numbersEx1 = [1, 2, 3, 4, 5];
+const sum = numbersEx1.reduce((accumulator, currentValue)=> {
+  console.log('accumulator', accumulator);
+  console.log('currentValue', currentValue);
+  return accumulator + currentValue;
+}, 0);
 
+console.log('Result is: ', sum);
+
+// arrow function const sum2 = array => array.reduce((a,b)=>a+b,0);
 
 // Exercise 2:
 // Find the maximum value in the given array. (Hint: Use -Infinity to compare values to)
