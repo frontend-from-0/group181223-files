@@ -13,20 +13,52 @@ HTTP status codes are three-digit numbers that the server sends in response to a
 500... - Service error (500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable)
 */
 
-const URL = 'https://jsonplaceholder.typicode.com/posts';
+const URL = 'https://jsonplaceholder.typicode.com/posts/';
+const fetchButton = document.getElementById('fetch-button');
+fetchButton.addEventListener('click', getPosts);
+// If you need to pass a parameter to the callback function, wrap it in an arrow function:
+// getPostButton.addEventListener('click', () => getPostById(id));
 
 function getPosts() {
+	fetch(URL)
+		.then((response) => response.json())
+		.then((responseArray) =>
+			responseArray.map((postData) => createPostHtml(postData))
+		);
 }
 
-function getPostById() {
+function createPostHtml(postData) {
+	const h2 = document.createElement('h2');
+	h2.innerText = postData.title;
+	h2.classList.add('post-title');
 
+	const li = document.createElement('li');
+	li.classList.add('post');
+	li.append(h2);
+
+	const deleteButton = document.createElement(`button`);
+	deleteButton.classList.add('button', 'button--danger');
+	deleteButton.innerText = 'delete';
+  // TODO: add event listener for click event to call delete post method (postData.id)
+
+	const updateButton = document.createElement(`a`);
+	updateButton.classList.add('button', 'button--success');
+	updateButton.innerText = 'update';
+  updateButton.href = `./update-post.html?postId=${postData.id}`;
+
+	li.append(updateButton, deleteButton);
+
+	document.getElementById('post-list').append(li);
+
+	// p
+	// p.innerText
+	// add class
 }
+
 
 function createPost() {
+  // Send post request
 }
 
-function updatePost() {
-}
 
-function deletePost() {
-}
+function deletePost(postId) {}
