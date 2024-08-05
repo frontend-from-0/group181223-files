@@ -56,6 +56,18 @@ myPromise
     console.error(error); // This code will execute if the Promise is rejected
   });
 
+
+const getResult = async () => {
+  try {
+    const data = await myPromise();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+getResult();
+
 console.log("Promise created. Waiting for it to resolve or reject...");
 
 
@@ -63,7 +75,33 @@ console.log("Promise created. Waiting for it to resolve or reject...");
 
 // Examples of making a function asyncronous
 // Function declaration
+async function fetchUserData () {
+  const res = await getUserData();
+}
+
+
 // Function expression
+const fetchUserSettings = async function () {
+  const res = await getUserData();
+}
 // Arrow function
+const fetchUserInformation = async () => {
+  try {
+    const res = await getUserData();
+    // Use data in some way
+  } catch (error) {
+    // set error to log processing tool OR log the error to console
+    console.error(error);
+    // Do something else to get similar data for the use
+  } finally {
+    // Do something else not matter if previous actions failed or not
+  }
+
+  async function getSomeOtherUserData() {
+    const res = await getUserData();
+  }
+
+  getSomeOtherUserData();
+}
 
 // Try, catch, finally
