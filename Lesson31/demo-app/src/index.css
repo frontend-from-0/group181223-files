@@ -24,3 +24,7 @@ body {
   background-color: var(--light-grey);
 }
 
+.dark-navy {
+  color: var(--dark-navy);
+}
+

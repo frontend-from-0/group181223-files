@@ -1,23 +1,23 @@
 import './App.css';
+import { HeadingL } from './shared-components/typography/HeadingL';
+import { HeadingM } from './shared-components/typography/HeadingM';
 
-// Name your React component with capitalised first letter
+// Name your React component with capitalised first letter (PascalCase)
 export function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    );
-}
+	const condition = true;
 
+	const handleClick = () => {
+		console.log('Button Clicked (external function)');
+	};
+
+	// JSX - JavaScript XML
+	return (
+		<div className='App'>
+			<HeadingL color='dark-navy'>Welcome to the</HeadingL>
+			<HeadingL isBold color='dark-navy'>
+				Frontend Quiz!
+			</HeadingL>
+			<HeadingM title='Example HeadingM text' />
+		</div>
+	);
+}
