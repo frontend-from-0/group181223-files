@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {todoData} from '../../data';
+import {todoData} from '../../../data';
 import './styles.css';
 
 export const List = () => {

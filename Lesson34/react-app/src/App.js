@@ -1,15 +1,16 @@
-import { List } from './components/List';
+import { List } from './modules/todo/List';
 import { Navbar } from './components/Navbar';
 import './App.css';
-import { loggedInUser } from './data';
-import { useState } from 'react';
+import { useContext } from 'react';
+import {UserContext} from './modules/user/UserProvider';
 
 export const App = () => {
-	 const [user, setUser] = useState(loggedInUser);
+	const user = useContext(UserContext);
 
 	return (
 		<div className='container'>
-			<Navbar isLoggedInUser={user.isLoggedInUser} updateUser={setUser} />
+			<Navbar />
+			{!user.isLoggedInUser && <p>You must log in before using the application!</p>}
 			{user.isLoggedInUser && <List />}
 		</div>
 	);
