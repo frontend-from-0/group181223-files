@@ -1,14 +1,24 @@
 import './styles.css';
-import {UserContext, UserDispatchContext} from '../../modules/user/UserProvider';
+import {UserContext, UserDispatchContext, UserActionTypes} from '../../modules/user/UserProvider';
 import { useContext } from 'react';
 
 
-export const Navbar = ({ }) => {
+export const Navbar = () => {
 	const user = useContext(UserContext);
 	const dispatchUser = useContext(UserDispatchContext);
 
 	const handleSignOutClick = () => {
-		dispatchUser({ isLoggedInUser: false });
+		dispatchUser({ type: UserActionTypes.SIGN_OUT});
+	};
+
+	const handleSignInClick = () => {
+		// When we learn react router, replace with actual SignIn page
+		dispatchUser({
+			type: UserActionTypes.SIGN_IN,
+			payload: {
+				username: 'johndoe01',
+			}
+		});
 	};
 
 	return (
@@ -19,7 +29,7 @@ export const Navbar = ({ }) => {
 				{user.isLoggedInUser ? (
 					<li onClick={handleSignOutClick}>Sign out</li>
 				) : (
-					<li>Sign in</li>
+					<li onClick={handleSignInClick}>Sign in</li>
 				)}
 			</ul>
 		</nav>
