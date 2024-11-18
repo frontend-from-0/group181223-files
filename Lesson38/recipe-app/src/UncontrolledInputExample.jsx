@@ -9,7 +9,7 @@ export const UncontrolledInput = () => {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} noValidate>
 			<label htmlFor='email'>Uncontrolled email input</label>
 			{
 				// Only use defaultValue with uncontrolled inputs

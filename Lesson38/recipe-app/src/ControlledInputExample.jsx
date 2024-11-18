@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const ControlledInput = () => {
-	const [emailInput, setEmailInput] = useState('anna@gmail.com');
+	const [emailInput, setEmailInput] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -11,7 +11,7 @@ export const ControlledInput = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} noValidate>
 			<label htmlFor='email'>Controlled email input</label>
 			<input
 				type='email'
