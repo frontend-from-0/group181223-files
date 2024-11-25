@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import { RecipeList } from "./modules/recipies/RecipeList";
-import { SearchBar } from "./modules/recipies/SearchBar";
-import { RecipeDetails } from "./modules/recipies/RecipeDetails";
+import { RecipeList } from "./modules/recipes/RecipeList";
+import { SearchBar } from "./modules/recipes/SearchBar";
+import { RecipeDetails } from "./modules/recipes/RecipeDetails";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { LoginForm } from "./modules/user/login";
+import { NewRecipeForm } from "./modules/recipes/NewRecipeForm";
 
 export const AppRouter = () => {
   return (
@@ -14,7 +15,7 @@ export const AppRouter = () => {
           path="new"
           element={
             <ProtectedRoute>
-              <p>Create new recipe page placholder</p>
+              <NewRecipeForm />
             </ProtectedRoute>
           }
         />
