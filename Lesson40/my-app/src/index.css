@@ -1,0 +1,39 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-dark: #14213D;
+  --color-primary: #FCA311;
+  --color-default: #000000;
+  --color-light: #fff;
+  --color-lighter: #E5E5E5;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
