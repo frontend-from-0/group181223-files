@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0 40px;
+  list-style-type: none;
+  height: 100px;
+}
+
+.navbar-item {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #495057;
+  text-decoration: none;
+  /* Added border-bottom in the same color as background on navbar so that the menu items don't just on hover effect */
+  border-bottom: 1px solid #f8f9fa;
+  min-width: 48px;
+}
+
+.navbar-item:hover {
+  border-bottom: 1px solid #495057;
+}
