@@ -1,21 +1,30 @@
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import {FormError} from "../../../components/form/FormError";
 import "./styles.css";
+import { Categories, Category } from "../models/categories";
+import { Area, Areas } from "../models/areas";
+
+interface NewRecipeProps {
+  strMeal: string;
+  strCategory: Category;
+  strArea: Area;
+  strYoutube?: string;
+}
 
 export const NewRecipeForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<NewRecipeProps>({
     defaultValues: {
       strMeal: "",
-      strCategory: null,
-      strArea: null,
+      strCategory: undefined,
+      strArea: undefined,
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit: SubmitHandler<NewRecipeProps> = (data) => {
     console.log(data);
   };
 
@@ -60,8 +69,8 @@ export const NewRecipeForm = () => {
               },
             })}
           >
-            <option value={null}>Select category</option>
-            {categories.map((category) => (
+            <option value={undefined}>Select category</option>
+            {Categories.map((category) => (
               <option key={category} value={category}>{category}</option>
             ))}
           </select>
@@ -70,13 +79,30 @@ export const NewRecipeForm = () => {
 
         <div className="input-group">
           <label htmlFor="strArea">Area</label>
-          <select name="" id="strArea" {...register("strArea")}>
-            <option value={null}>Select area</option>
-            {areas.map((area) => (
+          <select id="strArea" {...register("strArea")}>
+            <option value={undefined}>Select area</option>
+            {Areas.map((area) => (
               <option value={area}>{area}</option>
             ))}
           </select>
         </div>
+
+        <div className="input-group">
+          <label htmlFor="strYoutube">YouTube URL</label>
+          <input
+            id="strYoutube"
+            type="text"
+            className={errors.strMeal ? "error" : ""}
+            {...register("strYoutube", {
+              pattern: {
+                value: /^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+/,
+                message: "Please enter a valid YouTube URL",
+              },
+            })}
+          />
+          <FormError error={errors.strMeal?.message} />
+        </div>
+
 
         <button type="submit" className="btn-success">
           Save Recipe
@@ -109,51 +135,5 @@ export const NewRecipeForm = () => {
   );
 };
 
-const categories = [
-  "Beef",
-  "Breakfast",
-  "Chicken",
-  "Dessert",
-  "Goat",
-  "Lamb",
-  "Miscellaneous",
-  "Pasta",
-  "Pork",
-  "Seafood",
-  "Side",
-  "Starter",
-  "Vegan",
-  "Vegetarian",
-];
 
-const areas = [
-  "American",
-  "British",
-  "Canadian",
-  "Chinese",
-  "Croatian",
-  "Dutch",
-  "Egyptian",
-  "Filipino",
-  "French",
-  "Greek",
-  "Indian",
-  "Irish",
-  "Italian",
-  "Jamaican",
-  "Japanese",
-  "Kenyan",
-  "Malaysian",
-  "Mexican",
-  "Moroccan",
-  "Polish",
-  "Portuguese",
-  "Russian",
-  "Spanish",
-  "Thai",
-  "Tunisian",
-  "Turkish",
-  "Ukrainian",
-  "Unknown",
-  "Vietnamese",
-];
+

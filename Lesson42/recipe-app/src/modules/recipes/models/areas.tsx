@@ -1,0 +1,33 @@
+export enum Area {
+    American = "American",
+    British = "British",
+    Canadian = "Canadian",
+    Chinese = "Chinese",
+    Croatian = "Croatian",
+    Dutch = "Dutch",
+    Egyptian = "Egyptian",
+    Filipino = "Filipino",
+    French = "French",
+    Greek = "Greek",
+    Indian = "Indian",
+    Irish = "Irish",
+    Italian = "Italian",
+    Jamaican = "Jamaican",
+    Japanese = "Japanese",
+    Kenyan = "Kenyan",
+    Malaysian = "Malaysian",
+    Mexican = "Mexican",
+    Moroccan = "Moroccan",
+    Polish = "Polish",
+    Portuguese = "Portuguese",
+    Russian = "Russian",
+    Spanish = "Spanish",
+    Thai = "Thai",
+    Tunisian = "Tunisian",
+    Turkish = "Turkish",
+    Ukrainian = "Ukrainian",
+    Unknown = "Unknown",
+    Vietnamese = "Vietnamese"
+};
+
+export const Areas: Area[] = Object.values(Area);

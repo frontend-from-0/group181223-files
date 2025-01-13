@@ -33,7 +33,7 @@ Create a `tsconfig.json`` file in the root of your project. When you start the a
 ```
 
 3. Rename Files
-Next, rename any file to be converted to TypeScript with the .tsx extension (if it contains JSX) or .ts if it doesn't. For example, rename App.js to App.tsx and index.js to index.tsx.
+Next, rename any file to be converted to TypeScript with the .tsx extension (if it contains JSX) or .ts if it doesn't. For example, rename App.jsx to App.tsx and index.js to index.ts.
 
 You might need to update your code to fix any type errors TypeScript finds. Common updates include:
 - Adding type annotations to variables, function parameters, and return types.

@@ -10,9 +10,10 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Chip from "@mui/material/Chip";
 import { Container, useTheme } from "@mui/material";
+import { Recipe } from "../models/recipe";
 
 export const RecipeList = () => {
-  const [recipies, setRecipies] = useState([]);
+  const [recipies, setRecipies] = useState<Recipe[]>([]);
   const theme = useTheme();
 
   useEffect(() => {
