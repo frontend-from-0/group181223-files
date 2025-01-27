@@ -5,8 +5,8 @@ interface ProtectedRouteProps {
   children: ReactNode;
 }
 
-export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const isLoggedInUser = true;
 
-  return isLoggedInUser ? children : <Navigate to="/user/login" replace={true} />;
+  return isLoggedInUser ? <>{children}</> : <Navigate to="/user/login" replace={true} />;
 }
