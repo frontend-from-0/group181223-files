@@ -19,7 +19,7 @@ export default async function Home() {
         <ul className="flex flex-wrap gap-8">
           {recipeData.meals.map((recipe: Recipe) => (
             <li
-              className="p-4 border rounded-md shadow-md inline-block max-w-80 flex flex-col justify-between"
+              className="p-4 light:border rounded-md light:shadow-md dark:shadow-lg dark:bg-gray-700 inline-block max-w-80 flex flex-col justify-between"
               key={recipe.idMeal}
             >
               <div>
@@ -31,14 +31,14 @@ export default async function Home() {
                   className="mb-4"
                 />
                 <Link href={`/recipes/${recipe.idMeal}`}>
-                  <h2 className="text-lg text-gray-800 truncate text-ellipsis overflow-hidden hover:underline">
+                  <h2 className="text-lg truncate text-ellipsis overflow-hidden hover:underline">
                     {recipe.strMeal}
                   </h2>
                 </Link>
               </div>
 
               <div className="mt-4">
-                <span className="text-xs uppercase bg-gray-400 text-gray-100 text-sm py-2 px-4 rounded-full">
+                <span className="text-xs uppercase bg-gray-400 text-gray-100 text-sm py-2 px-4 rounded-full dark:border-gray-100 dark:border dark:bg-transparent">
                   {recipe.strCategory}
                 </span>
               </div>

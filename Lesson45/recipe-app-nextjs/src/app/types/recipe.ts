@@ -110,6 +110,7 @@ export const Areas: Area[] = Object.values(Area);
 
 
 export interface RecipeFormData {
+  idMeal?: string;
   strMeal: string;
   strInstructions: string;
   strMealThumb: string;

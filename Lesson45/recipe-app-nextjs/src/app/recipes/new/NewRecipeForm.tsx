@@ -1,9 +1,10 @@
 "use client";
 
 import { Button, Field, Input, Label } from "@headlessui/react";
-import { saveRecipe } from "components/app/actions/recipe";
-import { SaveRecipeActionResponse } from "components/app/types/recipe";
+import { saveRecipe } from "actions/recipe";
 import { useActionState } from "react";
+import { SaveRecipeActionResponse } from "types/recipe";
+import { CreatedRecipe } from "./CreatedRecipe";
 
 const initialState: SaveRecipeActionResponse = {
   success: false,
@@ -12,8 +13,18 @@ const initialState: SaveRecipeActionResponse = {
 
 export default function NewRecipeForm() {
   const [state, action, pending] = useActionState(saveRecipe, initialState);
+  const {strMeal, strInstructions, strMealThumb} = state?.inputs || {};
 
-  if (state.success) return <p>Successfully added</p>;
+  if (state.success)
+    return (
+      <>
+        <h2>Successfully added</h2>
+        {strMeal && strInstructions && strMealThumb && (
+          <CreatedRecipe title={strMeal} instructions={strInstructions} image={strMealThumb}/>
+        )}
+      </>
+    );
+
   return (
     <form
       action={action}
@@ -25,10 +36,10 @@ export default function NewRecipeForm() {
         <Input
           name="strMeal"
           type="text"
-          invalid={!!state?.errors?.strMeal?.[0]}
           required
           defaultValue={state.inputs?.strMeal}
           aria-describedby="strMeal-error"
+          invalid={!!state?.errors?.strMeal?.[0]}
           className="border rounded p-2 data-[hover]:shadow data-[invalid]:ring-red-500"
         />
         {state?.errors?.strMeal && (
@@ -74,8 +85,12 @@ export default function NewRecipeForm() {
         )}
       </Field>
 
-      <Button type='submit' disabled={pending} className="rounded bg-green-800 py-2 px-4 text-sm text-green-50 data-[hover]:bg-greeen-600">
-        {pending ? 'Saving...' : 'Save recipe'}
+      <Button
+        type="submit"
+        disabled={pending}
+        className="rounded bg-green-800 py-2 px-4 text-sm text-green-50 data-[hover]:bg-greeen-600"
+      >
+        {pending ? "Saving..." : "Save recipe"}
       </Button>
     </form>
   );

@@ -24,10 +24,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const darkModeBg = 'dark:from-gray-800 dark:to-gray-900';
+  const lightModeBg = 'from-gray-50 to-gray-200';
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-gray-50 to-gray-200 min-h-svh`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b ${lightModeBg} ${darkModeBg} min-h-svh`}
       >
         <UserProvider>
           <Navbar />
