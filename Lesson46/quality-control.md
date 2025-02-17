@@ -15,12 +15,18 @@
 
 - Mutation Testing: This advanced technique involves making small changes (mutations) to your code and running tests to check if they catch these changes. It helps assess the quality of your tests.
 
+## What do we use in React & NextJS for testing?
+- unit & snapshot tests -> Jest, React-testing-library
+
+- Integration &  End-to-End -> Cypress, Playwrigth
+
 ## Important notes:
 - Name folders with test files: __tests__
 - Name test files NameOfTheComponent.test.js or NameOfTheComponent.spec.js
 
 
-## How to write tests?
+## How to write tests (unit tests)?
 - render - to render an element: render(<MyComponent />);
 - screen - to find elements in the DOM: const element = screen.getByTestId('my-element');
 - userEvent - to simulate user interactions: userEvent.click(buttonElement);
+- expect - to check that the selected elements is as expected.
