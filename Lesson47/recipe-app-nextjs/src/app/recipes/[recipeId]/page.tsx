@@ -18,7 +18,7 @@ export default async function RecipeDetailsPage({
   return (
     <div>
       <h1>Current recipe is: {recipeId} </h1>
-      <h2>{recipe.strMeal}</h2>
+      <h2 data-testid='recipe-name'>{recipe.strMeal}</h2>
       <p>{recipe.strInstructions}</p>
       <Link href="/" className="block my-8 underline">Return to the main page</Link>
     </div>

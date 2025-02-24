@@ -15,12 +15,13 @@ export default async function Home() {
   return (
     recipeData && (
       <>
-        <h1>Recipe App</h1>
-        <ul className="flex flex-wrap gap-8">
+        <h1 data-testid="home-page-title">Recipe App</h1>
+        <ul className="flex flex-wrap gap-8" data-testid="recipe-list">
           {recipeData.meals.map((recipe: Recipe) => (
             <li
               className="p-4 light:border rounded-md light:shadow-md dark:shadow-lg dark:bg-gray-700 inline-block max-w-80 flex flex-col justify-between"
               key={recipe.idMeal}
+              data-testid="recipe-list-item"
             >
               <div>
                 <Image
@@ -38,7 +39,7 @@ export default async function Home() {
               </div>
 
               <div className="mt-4">
-                <span className="text-xs uppercase bg-gray-400 text-gray-100 text-sm py-2 px-4 rounded-full dark:border-gray-100 dark:border dark:bg-transparent">
+                <span data-testid="category-badge" className="text-xs uppercase bg-gray-400 text-gray-100 text-sm py-2 px-4 rounded-full dark:border-gray-100 dark:border dark:bg-transparent">
                   {recipe.strCategory}
                 </span>
               </div>
