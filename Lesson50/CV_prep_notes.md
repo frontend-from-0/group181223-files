@@ -10,7 +10,7 @@ Objective: Begin with a brief personal statement or objective that highlights wh
 Customization: Tailor this section to align with the specific role or company you’re applying to.
 
 3. Highlight Relevant Skills
-Technical Skills: List key frontend technologies relevant in 2025, such as NextJS, React, TailwindCSS, MaterialUI, TypeScript, JavaScript, HTML, CSS, Git, Figma, Knowledge of performance optimization techniques and accessibility standards (WCAG).
+Technical Skills: List key frontend technologies relevant in 2025, such as NextJS, React, TailwindCSS, TypeScript, MaterialUI, JavaScript, HTML, CSS, Git, Figma, Knowledge of performance optimization techniques and accessibility standards (WCAG).
 Soft Skills: Communication, teamwork, problem-solving, adaptability, and a willingness to learn, ability to work remotely, manage time effectively, and use collaboration tools.
 
 4. Showcase Projects
