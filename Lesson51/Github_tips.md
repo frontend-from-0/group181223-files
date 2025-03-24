@@ -39,7 +39,7 @@ Use search queries that include terms related to take-home assignments or coding
 "coding test" frontend in:readme
 ```
 
-Replace "frontend" with other keywords like "JavaScript", "React", "Vue", or "Next.js" to narrow your search.
+Replace "frontend" with other keywords like "JavaScript", "React", or "Next.js" to narrow your search.
 
 2. Filter by Repository Topics
 GitHub repositories often have topics or tags that describe their purpose. Use these to refine your search. For example:
