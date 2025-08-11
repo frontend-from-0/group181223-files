@@ -144,7 +144,19 @@ Optimization Task: They might ask you to improve performance or fix accessibilit
 
 **Tip**: Always read instructions carefully. Write clean, well-commented code with attention to accessibility, performance, and best practices. Summarize your solution approach in a README file.
 
-### Questions YOU should ask the interviewer
+### Questions YOU should ask the interviewer (Asking the right questions shows confidence and helps you stand out)
+
+What qualities have you seen in successful employees in this role?
+What excites you most about the future of the company?
+How does the team I’d be working with contribute to the company’s long-term goals?
+What challenges do you see the person in this role facing, and how can I prepare to overcome them?
+How would you describe the company culture in one word, and why?
+Whats the one thing someone new to this role should focus on in their first 90 days?
+Are there any opportunities for cross-departmental collaboration in this role?
+What drew you to work at this company, and what’s kept you here?
+Are there any skill gaps on the team that I could help fill?
+What does success look like for this role in the first year?
+
 
 https://www.themuse.com/advice/51-interview-questions-you-should-be-asking
 
